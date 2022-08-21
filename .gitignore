@@ -1,0 +1,16 @@
+.env
+/postgres/data/**
+!/postgres/data/.gitkeep
+/postgres/dump/**
+!/postgres/dump/.gitkeep
+/.ssh/**
+!/.ssh/.gitkeep
+/redis/data/**
+!/redis/data/.gitkeep
+/nginx/logs/**
+!/nginx/logs/.gitkeep
+/nginx/conf.d/**
+!/nginx/conf.d/.gitkeep
+
+.idea/
+.DS_Store
