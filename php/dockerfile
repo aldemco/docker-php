@@ -28,11 +28,11 @@ RUN if [ ${DOCKER_PHP_ENABLE_XDEBUG} = true ]; \
       pecl install xdebug && docker-php-ext-enable xdebug; \
     fi;
 
-COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+COPY ./docker-php/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Source code
 RUN chown www-data:www-data /var/www
-COPY --chown=www-data:www-data ./../../ /var/www
+COPY --chown=www-data:www-data ./ /var/www
 WORKDIR /var/www
 
 USER www-data
